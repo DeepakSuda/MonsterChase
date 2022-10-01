@@ -9,10 +9,10 @@ public class Player : MonoBehaviour
 
     private float movementX;
 
+    public GamePlayUI Gamecontroller;
 
     private Rigidbody2D myBody;
 
-    public Gameover gameover;
 
     private Animator anim;
 
@@ -94,7 +94,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag(ENEMY_TAG) || collision.gameObject.CompareTag("Ghost"))
         {
             anim.SetTrigger("die");
-            gameover.GameOver();
+            Gamecontroller.GameOver();
             Destroy(gameObject);
         }
     }
@@ -104,10 +104,11 @@ public class Player : MonoBehaviour
         if (collision.CompareTag("Ghost"))
         {
             anim.SetTrigger("die");
-            gameover.GameOver();
-           
+            Gamecontroller.GameOver();
+      
             new WaitForSeconds(20);
             Destroy(gameObject);
+            
         }
     }
 }

@@ -117,7 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveForce: 10
   jumpForce: 11
-  gameover: {fileID: 0}
+  GameController: {fileID: 0}
 --- !u!1001 &2496940455759580570
 PrefabInstance:
   m_ObjectHideFlags: 0
