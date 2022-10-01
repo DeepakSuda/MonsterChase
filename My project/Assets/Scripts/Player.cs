@@ -81,6 +81,7 @@ public class Player : MonoBehaviour
             myBody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             anim.SetBool(WALK_ANIMATION, false);
             anim.SetBool(JUMP_ANIMATION, true);
+
         }
     }
 
@@ -95,7 +96,7 @@ public class Player : MonoBehaviour
         {
             anim.SetTrigger("die");
             Gamecontroller.GameOver();
-            Destroy(gameObject);
+            Destroy(gameObject,0.5f);
         }
     }
 
@@ -106,9 +107,9 @@ public class Player : MonoBehaviour
             anim.SetTrigger("die");
             Gamecontroller.GameOver();
       
-            new WaitForSeconds(20);
-            Destroy(gameObject);
-            
+           Destroy(gameObject,0.5f);
+           
+
         }
     }
 }
